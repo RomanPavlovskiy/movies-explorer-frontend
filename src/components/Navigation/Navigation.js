@@ -8,6 +8,7 @@ function Navigation() {
         <label className='navigation__btn' htmlFor='navigation__toggle'>
           <span className='navigation__btn-img'></span>
         </label>
+        <div className='navigation__background'></div>
         <div className='navigation__container'>
           <ul className='navigation__items'>
             <li className='navigation__item navigation__item_type_main'>
@@ -20,8 +21,8 @@ function Navigation() {
               <a className='navigation__link' href='/saved-movies'>Сохранённые фильмы</a>
             </li>
           </ul>
-          <div className='navigation__item navigation__item_account'>
-            <a className='navigation__link navigation__link_account' href='/profile'>Аккаунт</a>
+          <div className='navigation__item navigation__item_type_account'>
+            <a className='navigation__link navigation__link_type_account' href='/profile'>Аккаунт</a>
             <img className='navigation__link-img' src={profileIcon} alt='Профайл' />
           </div>
         </div>

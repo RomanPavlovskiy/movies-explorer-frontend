@@ -77,7 +77,7 @@
     .portfolio__link {
       font-size: 18px;
       line-height: 28px;
-      background: transparent url(http://localhost:3000/static/media/arrow_icon_320.df47280….svg) 100%/11px no-repeat;
+      background-size: auto 11px;
       margin-right: 5px;
     }
   }
