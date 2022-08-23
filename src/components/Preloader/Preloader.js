@@ -1,13 +1,13 @@
-import './Preloader.css'
+import "./Preloader.css";
 
-function Preloader() {
+function Preloader({ showPreloader }) {
   return (
-    <div className="preloader">
+    <div className={`preloader ${showPreloader && "preloader_visible"}`}>
       <div className="preloader__container">
         <span className="preloader__round"></span>
       </div>
     </div>
-  )
-};
+  );
+}
 
 export default Preloader;

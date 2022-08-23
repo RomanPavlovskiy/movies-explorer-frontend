@@ -1,99 +1,183 @@
 .profile {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    color: #000000;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 410px;
+  margin: 0 auto;
+  padding-top: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__form {
+  flex: 1 1 auto;
+  display: flex;
+  max-width: 410px;
+  flex-direction: column;
+  position: relative;
+}
+
+.profile__container {
+  margin: 0 auto;
+  min-width: 410px;
+  color: #000000;
+  padding-bottom: 205px;
+}
+.profile__lable {
+  display: flex;
+  text-align: left;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.profile__lable:not(:last-of-type) {
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 17px;
+}
+
+.profile__title {
+  margin: 18px 0 124px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #000000;
+}
+
+.profile__input {
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+  flex: 1 1 auto;
+  padding: 0 0 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: right;
+}
+
+.profile__button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.profile__button_disabled {
+  background: #f8f8f8;
+  color: #c2c2c2;
+  pointer-events: auto;
+}
+
+.profile__button_visible {
+  background: #2be080;
+  color: #ffffff;
+}
+
+.profile__button_hidden {
+  display: none;
+}
+
+.profile__button {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  margin: auto 0 0;
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  border: none;
+  transition: all 0.3s ease;
+  justify-self: end;
+  align-self: flex-end;
+}
+
+.profile__edit-button {
+  margin: auto auto 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  border: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  display: inline;
+}
+
+.profile__edit-button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.profile__edit-button_hidden {
+  display: none;
+}
+
+.profile__logout-button {
+  margin: 16px 0 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #ff3055;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.profile__error {
+  font-size: 10px;
+  color: #ff3055;
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+}
+
+.profile__error_result {
+  position: relative;
+  bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    margin-top: 120px;
   }
-  
+
   .profile__container {
     margin: 0 auto;
     min-width: 410px;
-  }
-  
-  .profile__title {
-    margin: 18px 0 124px;
-    padding: 0;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-  }
-  
-  .profile__element {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #424242;
-    box-sizing: border-box;
-    height: 31px;
-  }
-  
-  .profile__element:last-of-type {
-    border-bottom: none;
-    padding-top: 18px;
-  }
-  
-  .profile__element-value {
-    margin: 0;
-    font-size: 11px;
-    line-height: 13px;
-  }
-  
-  .profile__element-value_weight {
-    font-weight: 500;
-  }
-  
-  .profile__links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 212px;
-  }
-  
-  .profile__link {
-    margin: 8px;
-    text-decoration: none;
-    font-size: 13px;
-    line-height: 16px;
     color: #000000;
-    transition: opacity .2s linear;
+    padding-bottom: 195px;
   }
-  
-  .profile__link:hover {
-    opacity: .6;
+
+  .profile__title {
+    margin: 66px 0 96px;
   }
-  
-  .profile__link_exit {
-    color: #EE3465;
+}
+
+@media screen and (max-width: 320px) {
+  .profile {
+    margin-top: 2px;
+    max-width: 260px;
+    padding-top: 0;
   }
-  
-  @media screen and (max-width: 768px) {
-    .profile {
-      margin-top: 168px;
-    }
-  
-    .profile__title {
-      margin: 66px 0 96px;
-    }
-  
-    .profile__links {
-      margin-top: 202px;
-    }
+
+  .profile__title {
+    margin-bottom: 80px;
   }
-  
-  @media screen and (max-width: 320px) {
-    .profile {
-      margin-top: 2px;
-    }
-  
-    .profile__title {
-      margin-bottom: 80px;
-    }
-  
-    .profile__container {
-      min-width: 260px;
-    }
-  
-    .profile__links {
-      margin-top: 370px;
-    }
+
+  .profile__container {
+    min-width: 260px;
+    padding-bottom: 365px;
   }
+}
