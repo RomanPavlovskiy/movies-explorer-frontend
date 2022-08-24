@@ -71,7 +71,7 @@ function Register({ onRegister, statusMessage }) {
             required
             placeholder="email"
             name="email"
-            id="email"
+            id="email-input"
             minLength="5"
             onChange={(e) => {
               handleChange(e);
@@ -98,7 +98,7 @@ function Register({ onRegister, statusMessage }) {
           <span className="form__input-error">
             {passwordValid.isWrong && passwordValid.errorMessage}
           </span>
-          <span className="form__error_result">
+          <span className="form__error_result-reg">
             {statusMessage.length !== 0 && statusMessage}
           </span>
           <button

@@ -50,7 +50,7 @@ function Login({ onLogin, statusMessage }) {
             required
             placeholder="email"
             name="email"
-            id="email"
+            id="email-input"
             minLength="5"
             onChange={(e) => {
               handleChange(e);
@@ -77,7 +77,7 @@ function Login({ onLogin, statusMessage }) {
           <span className="form__input-error">
             {passwordValid.isWrong && passwordValid.errorMessage}
           </span>
-          <span className="form__error_result">
+          <span className="form__error_result-login">
             {statusMessage.length !== 0 && statusMessage}
           </span>
           <button

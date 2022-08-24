@@ -103,11 +103,11 @@
   opacity: 0.6;
 }
 
-.form__input-error {
-  font-size: 10px;
-  line-height: 12px;
-  color: #ee3465;
-  margin-top: 7px;
+.form__error_result-login {
+  font-size: 16px;
+  color: #ff3055;
+  position: relative;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1060px) {

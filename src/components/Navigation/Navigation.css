@@ -102,7 +102,7 @@ a {
 }
 
 .navigation__link_type_active {
-  font-weight: 500;
+  font-weight: 900;
 }
 
 @media screen and (max-width: 768px) {

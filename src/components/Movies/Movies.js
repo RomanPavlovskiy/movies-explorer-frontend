@@ -5,7 +5,7 @@ import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import { moviesApi } from "../../utils/MoviesApi";
 import { SetFilterMovies } from "../../utils/filterMovies";
 
-function Movies({ savedMovies, getMovies, saveMovie }) {
+function Movies({ savedMovies, saveMovie }) {
   const [beatFilmMovies, setBeatFilmMovies] = useState([]);
   const [showPreloader, setShowPreloader] = useState(false);
   const [isSearchError, setIsSearchError] = useState(false);
@@ -66,7 +66,6 @@ function Movies({ savedMovies, getMovies, saveMovie }) {
         cards={filteredMovies}
         savedMovies={savedMovies}
         saveMovie={saveMovie}
-        getMovies={getMovies}
         showPreloader={showPreloader}
         isSearchError={isSearchError}
       />

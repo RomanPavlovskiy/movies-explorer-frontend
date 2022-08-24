@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
@@ -41,7 +41,19 @@ function App() {
     }
   }, []);
 
+  function setDataInfo() {
+    const jwt = localStorage.getItem("jwt");
+    MainApi.checkToken(jwt)
+      .then((res) => {
+        setCurrentUser({ name: res.name, email: res.email, id: res._id });
+      })
+      .catch((err) => {
+        checkError(err);
+      });
+  }
+
   useEffect(() => {
+    setStatusMessage("");
     if (loggedIn) {
       if (localStorage.getItem("savedMovies")) {
         setSavedMovies(JSON.parse(localStorage.getItem("savedMovies")));
@@ -63,17 +75,6 @@ function App() {
     }
   }
 
-  function setDataInfo() {
-    const jwt = localStorage.getItem("jwt");
-    MainApi.checkToken(jwt)
-      .then((res) => {
-        setCurrentUser({ name: res.name, email: res.email, id: res._id });
-      })
-      .catch((err) => {
-        checkError(err);
-      });
-  }
-
   function handleRegisterSubmit(name, email, password) {
     setShowPreloader(true);
     MainApi.register(name, email, password)
@@ -81,7 +82,6 @@ function App() {
         if (res) {
           handleLoginSubmit(email, password);
           setStatusMessage("");
-          navigate("/movies");
         }
       })
       .catch((err) => {
@@ -150,6 +150,7 @@ function App() {
   function updateSavedMovies(savedMovies) {
     setSavedMovies(savedMovies);
     localStorage.setItem("savedMovies", JSON.stringify(savedMovies));
+    console.log("фильм добавлен и хранилище обновлено")
   }
 
   function getSavedMovies() {
@@ -171,7 +172,9 @@ function App() {
     if (!isSaved) {
       MainApi.saveMovie(card)
         .then((newMovie) => {
-          updateSavedMovies([newMovie, ...savedMovies]);
+          setSavedMovies([newMovie, ...savedMovies])
+          localStorage.setItem("savedMovies", JSON.stringify(savedMovies))
+          getSavedMovies()
         })
         .catch((err) => {
           checkError(err);
@@ -211,7 +214,7 @@ function App() {
             path="/"
             element={
               <>
-                <Header loggedIn={false} />
+                <Header loggedIn={loggedIn} />
                 <Main />
                 <Footer />
               </>
@@ -219,20 +222,22 @@ function App() {
           />
           <Route
             path="/signin"
-            element={
-              <Login
+            element={!loggedIn
+              ? <Login
+                loggedIn={false}
                 onLogin={handleLoginSubmit}
                 statusMessage={statusMessage}
-              />
+              /> : <Navigate to="/movies"/>
             }
           />
           <Route
             path="/signup"
-            element={
-              <Register
+            element={!loggedIn
+              ? <Register
+                loggedIn={false}
                 onRegister={handleRegisterSubmit}
                 statusMessage={statusMessage}
-              />
+              /> : <Navigate to="/movies"/>
             }
           />
           <Route
@@ -259,7 +264,6 @@ function App() {
                 <Movies
                   savedMovies={savedMovies}
                   saveMovie={saveMovie}
-                  getMovies={getSavedMovies}
                   loggedIn={loggedIn}
                 />
                 <Footer />

@@ -131,8 +131,10 @@
 }
 
 @media screen and (max-width: 1023px) {
+  
   .movies-card__image {
     height: 190px;
+    width: 339px;
   }
 
   .movies-card__title {
@@ -149,6 +151,10 @@
   .movies-card__text {
     padding: 0;
   }
+
+  .movies-card__favorite-btn_is_hidden {
+    visibility: visible;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -158,6 +164,7 @@
 
   .movies-card__image {
     height: 168px;
+    width: 300px;
   }
   .movies-card__title-container {
     display: flex;

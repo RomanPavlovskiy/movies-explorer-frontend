@@ -9,7 +9,6 @@ function MoviesCardList({
   cards,
   savedMovies,
   saveMovie,
-  getMovies,
   deleteMovie,
   showPreloader,
   isSearchError,
@@ -44,7 +43,6 @@ function MoviesCardList({
             <MoviesCard
               key={card.id || card._id}
               card={card}
-              getMovies={getMovies}
               savedMovies={savedMovies}
               saveMovie={saveMovie}
               deleteMovie={deleteMovie}

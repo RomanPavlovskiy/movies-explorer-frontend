@@ -2,7 +2,7 @@ import React from "react";
 import "./MoviesCard.css";
 import { useLocation } from "react-router-dom";
 
-function MoviesCard({ card, savedMovies, saveMovie, getMovies, deleteMovie }) {
+function MoviesCard({ card, savedMovies, saveMovie, deleteMovie }) {
   const duration = `${Math.trunc(card.duration / 60)}ч ${card.duration % 60}м`;
   const path = useLocation();
   const isSaved = savedMovies?.some((i) => i.movieId === card.id);
@@ -12,7 +12,6 @@ function MoviesCard({ card, savedMovies, saveMovie, getMovies, deleteMovie }) {
 
   function handleSaveClick() {
     saveMovie(card);
-    getMovies();
   }
 
   function handleDeleteClick() {
