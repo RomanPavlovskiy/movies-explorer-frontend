@@ -1,128 +1,128 @@
 .techs {
-    margin: 0;
-    padding: 100px 70px;
-    background: #F5F5F5;
-    color: #000000;
+  margin: 0;
+  padding: 100px 70px;
+  background: #f5f5f5;
+  color: #000000;
+}
+
+.techs__title {
+  margin: 0;
+  padding-bottom: 22px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  font-style: normal;
+  letter-spacing: -0.04em;
+  border-bottom: 1px solid #000000;
+}
+
+.techs__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.techs__subtitle {
+  font-size: 50px;
+  line-height: 58px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -0.04em;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 90px;
+}
+
+.techs__text {
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 26px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.04em;
+  max-width: 460px;
+}
+
+.techs__elements {
+  padding: 100px 10px 0;
+  list-style-type: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 90px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.techs__element {
+  margin: 0;
+  padding: 0;
+  background: #e8e8e8;
+  border-radius: 10px;
+  width: 90px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: -0.04em;
+}
+
+@media screen and (max-width: 1060px) {
+  .techs {
+    padding: 92px 50px;
   }
-  
-  .techs__title {
-    margin: 0;
-    padding-bottom: 22px;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 27px;
-    font-style: normal;
-    letter-spacing: -0.04em;
-    border-bottom: 1px solid #000000;
-  }
-  
-  .techs__container {
-    display: flex;
-    flex-direction: column;
-  }
-  
+
   .techs__subtitle {
-    font-size: 50px;
-    line-height: 58px;
-    font-weight: 400;
-    text-align: center;
-    letter-spacing: -0.04em;
-    margin: 0 auto;
-    padding: 0;
-    padding-top: 90px;
+    padding-top: 79px;
   }
-  
+
   .techs__text {
-    margin: 0 auto;
-    padding: 0;
-    padding-top: 26px;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: -0.04em;
-    max-width: 460px;
+    font-size: 12px;
+    line-height: 18px;
+    padding-top: 22px;
   }
-  
+
   .techs__elements {
-    padding: 100px 10px 0;
-    list-style-type: none;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 90px);
-    gap: 10px;
-    justify-content: center;
+    padding: 83px 0 0;
+    grid-template-columns: repeat(auto-fit, 84px);
   }
-  
+
   .techs__element {
-    margin: 0;
-    padding: 0;
-    background: #E8E8E8;
-    border-radius: 10px;
-    width: 90px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: center;
-    letter-spacing: -0.04em;
+    font-size: 12px;
+    line-height: 15px;
+    width: 84px;
+    height: 57px;
   }
-  
-  @media screen and (max-width: 1060px) {
-    .techs {
-      padding: 92px 50px;
-    }
-  
-    .techs__subtitle {
-      padding-top: 79px;
-    }
-  
-    .techs__text {
-      font-size: 12px;
-      line-height: 18px;
-      padding-top: 22px;
-    }
-  
-    .techs__elements {
-      padding: 83px 0 0;
-      grid-template-columns: repeat(auto-fit, 84px);
-    }
-  
-    .techs__element {
-      font-size: 12px;
-      line-height: 15px;
-      width: 84px;
-      height: 57px;
-    }
+}
+
+@media screen and (max-width: 320px) {
+  .techs {
+    padding: 30px 18px;
+    background: #ffffff;
   }
-  
-  @media screen and (max-width: 320px) {
-    .techs {
-      padding: 30px 18px;
-      background: #FFFFFF;
-    }
-  
-    .techs__title {
-      font-size: 18px;
-      line-height: 22px;
-      padding-bottom: 26px;
-      border-bottom: 1px solid #000;
-    }
-  
-    .techs__subtitle {
-      font-size: 30px;
-      line-height: 36px;
-      padding-top: 60px;
-    }
-  
-    .techs__text {
-      font-size: 11px;
-      line-height: 16px;
-      padding-top: 24px;
-    }
-  
-    .techs__elements {
-      padding: 50px 10px 10px;
-    }
+
+  .techs__title {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #000;
   }
+
+  .techs__subtitle {
+    font-size: 30px;
+    line-height: 36px;
+    padding-top: 60px;
+  }
+
+  .techs__text {
+    font-size: 11px;
+    line-height: 16px;
+    padding-top: 24px;
+  }
+
+  .techs__elements {
+    padding: 50px 10px 10px;
+  }
+}

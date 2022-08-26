@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #5C5C5C;
+  color: #5c5c5c;
   font-weight: 500;
   min-width: 183px;
   margin: auto 0;
@@ -12,16 +12,16 @@
   text-decoration: none;
   font-size: 12px;
   line-height: 16px;
-  color: #FFF;
-  transition: opacity .2s linear;
+  color: #fff;
+  transition: opacity 0.2s linear;
 }
 
 .auth__signup:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .auth__signin {
-  background-color: #2BE080;
+  background-color: #2be080;
   border-radius: 3px;
   box-sizing: border-box;
   padding: 8px 20px;
@@ -29,11 +29,11 @@
   text-decoration: none;
   font-size: 12px;
   line-height: 16px;
-  transition: opacity .2s linear;
+  transition: opacity 0.2s linear;
 }
 
 .auth__signin:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 540px) {
