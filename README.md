@@ -4,4 +4,3 @@
 
 ## Ссылка на домен: https://prdiploma.nomoredomains.xyz
 
-## Ссылка на pull request https://github.com/RomanPavlovskiy/movies-explorer-frontend/pull/2 
